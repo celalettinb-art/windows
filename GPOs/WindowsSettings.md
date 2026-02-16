@@ -1,6 +1,6 @@
-* Machine Settings
-1. Taskleisteneinstellungen
-   - Widgets deaktivieren (ab Windows 11 24H2)
+# Machine Settings
+## Taskleisteneinstellungen
+### Widgets deaktivieren (ab Windows 11 24H2)
    ~~~
    Comuterkonfiguration > Richtlinien > Administrative Vorlagen > Windows-Komponenten > Widgets
    Zulassen von Widgets > Deaktiviert
@@ -16,8 +16,8 @@
    Schaltfläche „TaskView“ ausblenden > Aktiviert
    ~~~
 
-* User Seetings
-  - Windows Explorer Einstellungen (Datei-Explorer)
+# User Seetings
+## Windows Explorer Einstellungen (Datei-Explorer)
     - Datei-Explorer öffnen für: Dieser PC
     ~~~
     Benutzerkonfiguration > Einstellungen > Windows-Einstellungen > Registrierung
