@@ -1,6 +1,6 @@
-# Machine Settings
-## Taskleisteneinstellungen
-### Widgets deaktivieren (ab Windows 11 24H2)
+### Machine Settings
+#### Taskleisteneinstellungen
+##### Widgets deaktivieren (ab Windows 11 24H2)
    ~~~
    Comuterkonfiguration > Richtlinien > Administrative Vorlagen > Windows-Komponenten > Widgets
    Zulassen von Widgets > Deaktiviert
