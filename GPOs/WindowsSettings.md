@@ -17,8 +17,8 @@
    ~~~
 
 * User Seetings
-- Windows Explorer Einstellungen (Datei-Explorer)
-  - Datei-Explorer öffnen für: Dieser PC
+  - Windows Explorer Einstellungen (Datei-Explorer)
+    - Datei-Explorer öffnen für: Dieser PC
     ~~~
     Benutzerkonfiguration > Einstellungen > Windows-Einstellungen > Registrierung
     Struktur: HKEY_CURRENT_USER
@@ -27,11 +27,11 @@
     Werttyp: REG_DWORD
     Wertdaten: 1
     ~~~   
-  - Erweiterungen bei bekannten Dateitypen ausblenden: Abwählen
+    - Erweiterungen bei bekannten Dateitypen ausblenden: Abwählen
     ~~~
 
     ~~~
-  - Verteckte Dateien und Ordner: Ausgeblendete Dateien, Ordner und Laufwerke anzeigen
+    - Verteckte Dateien und Ordner: Ausgeblendete Dateien, Ordner und Laufwerke anzeigen
     ~~~
 
     ~~~
