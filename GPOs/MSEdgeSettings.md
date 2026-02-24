@@ -8,7 +8,7 @@ Comuterkonfiguration > Richtlinien > Administrative Vorlagen > Microsoft Edge
 ##### Werbeanzeigen in Bing deaktivieren
 ~~~
 Comuterkonfiguration > Richtlinien > Administrative Vorlagen > Microsoft Edge
-„Eindruck beim ersten Ausführen“ und Begrüßungsbildschirm ausblenden > Aktiviert
+Alle Werbeanzeigen in Bing-Suchergebnissen blockieren > Aktiviert
 ~~~
 ##### Von anderen Browser importieren deaktivieren
 ~~~
