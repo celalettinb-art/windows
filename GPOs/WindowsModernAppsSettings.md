@@ -1,1 +1,1 @@
-
+uninstall unnecessery Apps
