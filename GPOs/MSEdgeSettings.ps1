@@ -7,6 +7,9 @@
 # $url = "https://raw.githubusercontent.com/celalettinb-art/windows/refs/heads/main/GPOs/MSEdgeSettings.ps1"
 # irm $url | iex
 
+$path = "HKLM:\Software\Policies\Microsoft\Edge"
+if (!(Test-Path $path)){New-Item -Path $path -Force | Out-Null}
+
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v HideFirstRunExperience /t REG_DWORD /d 1 /f # Erstausführungs-Erlebnis deaktivieren
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v BingAdsSuppression /t REG_DWORD /d 1 /f # Werbeanzeigen in Bing deaktivieren
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v AutoImportAtFirstRun /t REG_DWORD /d 4 /f # Von anderen Browser importieren deaktivieren
