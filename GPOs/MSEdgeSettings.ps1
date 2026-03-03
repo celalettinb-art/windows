@@ -1,19 +1,26 @@
-###
+# Warning: Before executing any script, command, or software obtained from the Internet, ensure that you have carefully reviewed and fully understood its functionality.
+#     Running unverified or untrusted code may result in system damage, data loss, or security breaches.
+# Disclaimer: The author assumes no responsibility or liability for any damage, data loss, or other issues that may arise from the use or misuse of this script or information. Use it at your own risk.
+# Option 1
+# iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/celalettinb-art/windows/refs/heads/main/GPOs/MSEdgeSettings.ps1'))
+# Option 2
+# $url = "https://raw.githubusercontent.com/celalettinb-art/windows/refs/heads/main/GPOs/MSEdgeSettings.ps1"
+# irm $url | iex
 
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name HideFirstRunExperience -Value 1 -Type DWord # Erstausführungs-Erlebnis deaktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name BingAdsSuppression -Value 1 -Type DWord # Werbeanzeigen in Bing deaktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name AutoImportAtFirstRun -Value 4 -Type DWord # Von anderen Browser importieren deaktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name DiagnosticData -Value 0 -Type DWord # Senden von Diagnosedaten deaktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name PersonalizationReportingEnabled -Value 0 -Type DWord # Personalisierung und Nutzungsdaten an Microsoft senden deaktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name SyncDisabled -Value 0 -Type DWord # Synchronisierung von Daten mit Microsoft-Synchronisierungsdiensten deaktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge\Recommended' -Name FavoritesBarEnabled -Value 1 -Type DWord # Favoritenleiste aktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge\Recommended' -Name DefaultSearchProviderEnabled -Value 0 -Type DWord # Standardsuchanbieter aktivieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge\Recommended' -Name DefaultSearchProviderSuggestURL -Value "https://www.google.de/complete/search?output=chrome&q={searchTerms}" -Type DWord # Standard-Suchanbieter-URL für Vorschläge
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge\Recommended' -Name DefaultSearchProviderSearchURL -Value "https://www.google.de/search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}" -Type String # Such-URL für den Standardsuchanbieter
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name RestoreOnStartup -Value 4 -Type DWord # Startseite
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name NewTabPageAllowedBackgroundTypes -Value 3 -Type DWord # Hintergrundtyp konfigurieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name HomepageLocation -Value "https://www.google.de" -Type String # Homepage-URL
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name ShowHomeButton -Value 1 -Type DWord # Schaltfläche „Startseite“ auf Symbolleiste anzeigen
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name NewTabPageLocation -Value "https://www.google.de" -Type String # URL für die neue Tabseite konfigurieren
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge\RestoreOnStartupURLs' -Name 1 -Value "https://www.google.de" -Type String # Websites, die beim Start des Browsers geöffnet werden sollen
-New-ItemProperty -Path 'HKLM:\Software\Policies\Microsoft\Edge' -Name NewTabPageContentEnabled -Value 0 -Type DWord # Microsoft-Inhalte
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v HideFirstRunExperience REG_DWORD /d 1 /f # Erstausführungs-Erlebnis deaktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v BingAdsSuppression REG_DWORD /d 1 /f # Werbeanzeigen in Bing deaktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v AutoImportAtFirstRun REG_DWORD /d 4 /f # Von anderen Browser importieren deaktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v DiagnosticData REG_DWORD /d 0 /f # Senden von Diagnosedaten deaktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v PersonalizationReportingEnabled REG_DWORD /d 0 /f # Personalisierung und Nutzungsdaten an Microsoft senden deaktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v SyncDisabled REG_DWORD /d 0 /f # Synchronisierung von Daten mit Microsoft-Synchronisierungsdiensten deaktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v FavoritesBarEnabled REG_DWORD /d 1 /f # Favoritenleiste aktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v DefaultSearchProviderEnabled REG_DWORD /d 1 /f # Standardsuchanbieter aktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v DefaultSearchProviderSuggestURL /d "https://www.google.de/complete/search?output=chrome&q={searchTerms}" /t REG_SZ /f # Standard-Suchanbieter-URL für Vorschläge
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v DefaultSearchProviderSearchURL /d "https://www.google.de/search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}" /t REG_SZ /f # Such-URL für den Standardsuchanbieter
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v RestoreOnStartup REG_DWORD /d 4 /f # Startseite
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v NewTabPageAllowedBackgroundTypes REG_DWORD /d 3 /f # Hintergrundtyp konfigurieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v HomepageLocation /d "https://www.google.de" /t REG_SZ /f # Homepage-URL
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v ShowHomeButton REG_DWORD /d 1 /f # Schaltfläche „Startseite“ auf Symbolleiste anzeigen
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v NewTabPageLocation /d "https://www.google.de" /t REG_SZ /f # URL für die neue Tabseite konfigurieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge\RestoreOnStartupURLs" /v 1 /d "https://www.google.de" /t REG_SZ /f # Websites, die beim Start des Browsers geöffnet werden sollen
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v NewTabPageContentEnabled REG_DWORD /d 0 /f # Microsoft-Inhalte
