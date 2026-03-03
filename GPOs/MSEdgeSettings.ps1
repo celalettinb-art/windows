@@ -11,7 +11,7 @@ reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v HideFirstRunExperience /t
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v BingAdsSuppression /t REG_DWORD /d 1 /f # Werbeanzeigen in Bing deaktivieren
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v AutoImportAtFirstRun /t REG_DWORD /d 4 /f # Von anderen Browser importieren deaktivieren
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v DiagnosticData /t REG_DWORD /d 0 /f # Senden von Diagnosedaten deaktivieren
-reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v PersonalizationReportingEnabled REG_DWORD /d 0 /f # Personalisierung und Nutzungsdaten an Microsoft senden deaktivieren
+reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v PersonalizationReportingEnabled /t REG_DWORD /d 0 /f # Personalisierung und Nutzungsdaten an Microsoft senden deaktivieren
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge" /v SyncDisabled /t REG_DWORD /d 0 /f # Synchronisierung von Daten mit Microsoft-Synchronisierungsdiensten deaktivieren
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v FavoritesBarEnabled /t REG_DWORD /d 1 /f # Favoritenleiste aktivieren
 reg.exe add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v DefaultSearchProviderEnabled /t REG_DWORD /d 1 /f # Standardsuchanbieter aktivieren
