@@ -23,7 +23,8 @@ $apps = @(
 "MicrosoftCorporationII.QuickAssist",
 "Microsoft.MicrosoftSolitaireCollection",
 "Microsoft.GamingApp",
-"Microsoft.WindowsFeedbackHub"
+"Microsoft.WindowsFeedbackHub",
+"Microsoft.MicrosoftStickyNotes"
 )
 
 foreach ($app in $apps) {
